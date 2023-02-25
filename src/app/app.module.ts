@@ -8,8 +8,9 @@ import { LoginPageComponent } from './pages/account/login-page/login-page.compon
 import { ResetPasswordPageComponent } from './pages/account/reset-password-page/reset-password-page.component';
 import { SignupPageComponent } from './pages/account/signup-page/signup-page.component';
 import { ProductsPageComponent } from './pages/store/products-page/products-page.component';
-import { PetsPageComponent } from './pages/store/pets-page/pets-page.component';
+import { PetsPageComponent } from './pages/account/pets-page/pets-page.component';
 import { CartPageComponent } from './pages/store/cart-page/cart-page.component';
+import { FramePageComponent } from './pages/master/frame.page';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CartPageComponent } from './pages/store/cart-page/cart-page.component';
     SignupPageComponent,
     ProductsPageComponent,
     PetsPageComponent,
-    CartPageComponent
+    CartPageComponent,
+    FramePageComponent
   ],
   imports: [
     BrowserModule,
