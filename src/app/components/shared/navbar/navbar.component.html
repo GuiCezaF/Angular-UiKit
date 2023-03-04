@@ -20,12 +20,13 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">
-                            <span class="uk-icon uk-margin-small-right" uk-icon ="icon: user"></span>
-                        </a>
+                        <a [routerLink]="['/account']">
+                            <span class="uk-icon uk-margin-small-right" uk-icon="icon: user"></span>
+                            {{ user?.name }}
+                          </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="/login">
                             <span class="uk-icon uk-margin-small-right" uk-icon = "icon: sign-out"></span>
                         </a>
                     </li>
