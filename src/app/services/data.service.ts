@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core'
 import { Products } from '../models/product.model';
+import { Security } from '../utils/security.util';
 
 @Injectable({
     providedIn: 'root'
@@ -12,7 +13,7 @@ export class DataService {
     constructor(private http: HttpClient){ }
 
     public composeHeaders() {
-        const token = localStorage.getItem('petshop.token');
+        const token = Security.getToken();
         const headers = new HttpHeaders().set('Authorization', `bearer ${token}`);
         return headers;
     }
@@ -38,5 +39,13 @@ export class DataService {
     resetPassword(data: any){
         return this.http.post(`${this.url}/accounts/reset-password`, data);
 
+    }
+
+    getProfile() {
+        return this.http.get(`${this.url}/accounts`, { headers: this.composeHeaders() });
+    }
+
+    updateProfile(data: any) {
+        return this.http.put(`${this.url}/accounts`, data, { headers: this.composeHeaders() });
     }
 }

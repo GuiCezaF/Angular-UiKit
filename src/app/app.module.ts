@@ -22,6 +22,7 @@ import { MaskDirective } from './directives/mask.directive';
 import { DataService } from './services/data.service';
 import { AuthService } from './services/auth.service';
 import { CheckoutPageComponent } from './pages/store/checkout-page/checkout-page.component';
+import { ProfilePageComponent } from './pages/account/profile-page/profile-page.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { CheckoutPageComponent } from './pages/store/checkout-page/checkout-page
     ProductCardComponent,
     LoadingComponent,
     CheckoutPageComponent,
+    ProfilePageComponent,
   ],
   imports: [
     BrowserModule,
